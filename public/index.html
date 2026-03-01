@@ -1,0 +1,56 @@
+<html>
+  <body>
+    <main>
+      <h1>UserScripts</h1>
+      <ul>
+        <li>
+          <a href="./paging.user.js">⬅️选课➡️</a>
+          <p>方向键翻页</p>
+        </li>
+      </ul>
+    </main>
+  </body>
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+      --accent: rgb(99, 213, 131);
+      background-color: var(--bg);
+      color: var(--fg);
+      font-size: 16px;
+      font-family:
+        "Fira Code", "SF Mono", "SF Mono Regular", Consolas, "Liberation Mono",
+        Menlo, Courier, monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.2em;
+      text-decoration-color: rgba(from currentColor r g b / 0.5);
+      transition: text-decoration-color 150ms;
+    }
+
+    a:hover {
+      text-decoration-color: currentColor;
+    }
+
+    main {
+      margin: 3rem auto;
+      max-width: 800px;
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    li::marker {
+      color: rgba(from currentColor r g b / 0.5);
+    }
+
+    ul > li > a:first-child {
+      font-size: 1.25em;
+      font-weight: bold;
+      display: block;
+    }
+  </style>
+</html>
