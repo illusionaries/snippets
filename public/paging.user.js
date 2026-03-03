@@ -2,7 +2,7 @@
 // @name         ⬅️选课➡️
 // @namespace    https://illusion.blog/
 // @version      1.14.514
-// @description  try to take over the world!
+// @description  方向键翻页
 // @author       illusionaries
 // @match        https://elective.pku.edu.cn/*
 // @grant        none
