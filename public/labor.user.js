@@ -38,6 +38,9 @@ const waitForVideoReady = (video) => {
   "use strict";
   let stop = true;
   const debug = false;
+  const pptSelector = debug
+    ? ".node-file-l-114"
+    : ".node-file-l-114:has(img[src='https://w.readoor.cn/w/app30/img/viewer/v_208.png'])";
   const lessonSelector = debug
     ? ".node-file-l-104"
     : ".node-file-l-104:has(img[src='https://w.readoor.cn/w/app30/img/viewer/v_208.png'])";
@@ -46,6 +49,13 @@ const waitForVideoReady = (video) => {
     // expand all folders
     document.querySelectorAll(".node-folder-l0").forEach((x) => x.click());
     await sleep(1000); // Wait for UI to update
+    const ppts = document.querySelectorAll(pptSelector);
+    console.log(ppts)
+    for (const ppt of ppts) {
+      if (stop) return;
+      ppt.click();
+      await sleep(500);
+    }
     const lessons = document.querySelectorAll(lessonSelector);
     for (const lesson of lessons) {
       if (stop) return;
