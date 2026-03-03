@@ -11,16 +11,13 @@
 
 (function () {
   "use strict";
-  const doRemove = () => {
+  const doComplete = () => {
     const vid = document.querySelector("video");
-    const controls = document.querySelector("xg-controls");
-    if (!vid || !controls) return;
-    controls.remove();
-    vid.controls = true;
-    clearInterval(interval);
+    if (!vid) return;
+    vid.currentTime = vid.duration;
   };
   document.addEventListener("keyup", (e) => {
     if (e.key !== "f") return;
-    doRemove();
+    doComplete();
   });
 })();
